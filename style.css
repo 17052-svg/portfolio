@@ -1,0 +1,53 @@
+.contact{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.contact h1{
+    color:#ff2d2d;
+    font-size:40px;
+    margin-bottom:30px;
+    animation:glow 2s infinite alternate;
+}
+
+.contact-card{
+    width:400px;
+    max-width:90%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,0,0,.4);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(255,0,0,.4);
+    animation:float 4s ease-in-out infinite;
+}
+
+.contact-card p{
+    font-size:22px;
+    margin:25px 0;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px red;
+    }
+    to{
+        text-shadow:0 0 30px red;
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
