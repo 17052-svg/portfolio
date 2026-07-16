@@ -1,0 +1,185 @@
+/* =====================
+   พื้นหลังคลื่นแดง
+===================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:800px;
+
+height:800px;
+
+top:-300px;
+
+left:-200px;
+
+background:
+radial-gradient(circle,
+rgba(255,0,0,.35),
+transparent 70%);
+
+animation:waveMove 10s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+bottom:-300px;
+
+right:-200px;
+
+background:
+radial-gradient(circle,
+rgba(150,0,0,.3),
+transparent 70%);
+
+animation:waveMove2 12s infinite alternate;
+
+z-index:-1;
+
+}
+
+
+
+@keyframes waveMove{
+
+from{
+
+transform:translate(0,0) rotate(0deg);
+
+}
+
+
+to{
+
+transform:translate(200px,100px) rotate(360deg);
+
+}
+
+}
+
+
+
+@keyframes waveMove2{
+
+from{
+
+transform:translate(0,0) rotate(0deg);
+
+}
+
+
+to{
+
+transform:translate(-200px,-100px) rotate(-360deg);
+
+}
+
+}
+
+
+
+/* =====================
+   การ์ดลอย
+===================== */
+
+
+.profile-card,
+.activity-card,
+.education-card,
+.contact-card,
+.skill-card{
+
+
+animation:float 4s ease-in-out infinite;
+
+
+}
+
+
+
+@keyframes float{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* =====================
+   ตัวหนังสือเรืองแสง
+===================== */
+
+
+h1,
+h2{
+
+
+text-shadow:
+
+0 0 10px red,
+
+0 0 30px red,
+
+0 0 50px red;
+
+
+}
+
+
+
+/* =====================
+   รูปมีแสงเวลาเอาเมาส์ชี้
+===================== */
+
+
+img{
+
+transition:.5s;
+
+}
+
+
+
+img:hover{
+
+transform:scale(1.08);
+
+filter:drop-shadow(0 0 20px red);
+
+}
