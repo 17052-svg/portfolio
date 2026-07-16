@@ -435,7 +435,283 @@ padding:15px;
 
 
 font-size:18px;
+/* =========================
+   BACKGROUND WAVE EFFECT
+========================= */
 
+body{
+    overflow-x:hidden;
+}
+
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:800px;
+
+height:800px;
+
+background:
+
+radial-gradient(circle,
+rgba(255,0,0,.35),
+transparent 70%);
+
+
+top:-300px;
+
+left:-200px;
+
+
+animation:waveMove 10s infinite alternate;
+
+
+z-index:-1;
+
+}
+
+
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:700px;
+
+height:700px;
+
+
+background:
+
+radial-gradient(circle,
+rgba(150,0,0,.3),
+transparent 70%);
+
+
+
+bottom:-300px;
+
+right:-200px;
+
+
+animation:waveMove2 12s infinite alternate;
+
+
+z-index:-1;
+
+}
+
+
+
+@keyframes waveMove{
+
+
+from{
+
+transform:translate(0,0)
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:translate(200px,100px)
+rotate(360deg);
+
+}
+
+}
+
+
+
+@keyframes waveMove2{
+
+
+from{
+
+transform:translate(0,0)
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:translate(-200px,-100px)
+rotate(-360deg);
+
+}
+
+}
+
+
+
+/* =========================
+   CARD FLOAT EFFECT
+========================= */
+
+
+.card,
+.profile-card,
+.activity-card,
+.skill-card,
+.education-card,
+.contact-card{
+
+
+animation:floatCard 4s ease-in-out infinite;
+
+
+}
+
+
+
+@keyframes floatCard{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* =========================
+   RED NEON TEXT
+========================= */
+
+
+h1,h2{
+
+
+text-shadow:
+
+0 0 10px red,
+
+0 0 20px red,
+
+0 0 40px red;
+
+
+}
+
+
+
+/* =========================
+   IMAGE GLOW
+========================= */
+
+
+img{
+
+
+transition:.5s;
+
+
+}
+
+
+
+img:hover{
+
+
+transform:scale(1.08);
+
+
+filter:
+
+drop-shadow(0 0 20px red);
+
+
+}
+
+
+
+/* =========================
+   BUTTON EFFECT
+========================= */
+
+
+button,
+.button{
+
+
+position:relative;
+
+overflow:hidden;
+
+
+}
+
+
+
+button:hover,
+.button:hover{
+
+
+box-shadow:
+
+0 0 10px red,
+
+0 0 30px red;
+
+
+}
+
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+
+.fade{
+
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+
+}
+
+
+
+.fade.show{
+
+
+opacity:1;
+
+transform:translateY(0);
+
+
+}
 
 line-height:1.6;
 
