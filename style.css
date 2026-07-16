@@ -1,725 +1,23 @@
-.contact{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Kanit',sans-serif;
 }
-
-.contact h1{
-    color:#ff2d2d;
-    font-size:40px;
-    margin-bottom:30px;
-    animation:glow 2s infinite alternate;
-}
-
-.contact-card{
-    width:400px;
-    max-width:90%;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,0,0,.4);
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 0 30px rgba(255,0,0,.4);
-    animation:float 4s ease-in-out infinite;
-}
-
-.contact-card p{
-    font-size:22px;
-    margin:25px 0;
-}
-
-@keyframes glow{
-    from{
-        text-shadow:0 0 10px red;
-    }
-    to{
-        text-shadow:0 0 30px red;
-    }
-}
-
-@keyframes float{
-    0%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-12px);
-    }
-    100%{
-        transform:translateY(0);
-    }
-}
-.personal{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-direction:column;
-
-background:#050505;
-
-color:white;
-
-}
-
-
-.personal h1{
-
-color:red;
-
-font-size:45px;
-
-text-shadow:0 0 20px red;
-
-}
-
-
-
-.profile-card{
-
-
-width:700px;
-
-max-width:90%;
-
-display:flex;
-
-gap:40px;
-
-padding:40px;
-
-
-background:rgba(255,255,255,0.08);
-
-backdrop-filter:blur(15px);
-
-
-border-radius:25px;
-
-
-border:1px solid red;
-
-
-box-shadow:0 0 30px red;
-
-
-animation:float 4s infinite;
-
-
-}
-
-
-
-.profile-card img{
-
-
-width:250px;
-
-height:250px;
-
-
-object-fit:cover;
-
-
-border-radius:50%;
-
-
-border:5px solid red;
-
-
-box-shadow:0 0 30px red;
-
-
-}
-
-
-
-.info p{
-
-font-size:20px;
-
-line-height:1.8;
-
-}
-
-
-
-@keyframes float{
-
-
-0%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-
-100%{
-
-transform:translateY(0);
-.education{
-
-min-height:100vh;
-
-background:#050505;
-
-color:white;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-
-.education h1{
-
-font-size:45px;
-
-color:red;
-
-text-shadow:0 0 20px red;
-
-margin-bottom:40px;
-
-}
-
-
-
-.education-container{
-
-width:80%;
-
-display:flex;
-
-gap:30px;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-}
-
-
-
-.education-card{
-
-
-width:300px;
-
-
-padding:30px;
-
-
-background:rgba(255,255,255,0.08);
-
-
-border-radius:20px;
-
-
-border:1px solid red;
-
-
-box-shadow:0 0 20px rgba(255,0,0,.5);
-
-
-text-align:center;
-
-
-transition:.4s;
-
-
-animation:float 4s infinite;
-
-
-}
-
-
-
-.education-card:hover{
-
-
-transform:translateY(-15px) scale(1.05);
-
-
-box-shadow:0 0 40px red;
-
-
-}
-
-
-
-.education-card h2{
-
-
-color:#ff3333;
-
-
-font-size:24px;
-
-
-}
-
-
-
-.education-card p{
-
-
-font-size:20px;
-
-
-}
-}
-
-
-}
-.activities{
-
-min-height:100vh;
-
-background:#050505;
-
-color:white;
-
-padding:80px 0;
-
-text-align:center;
-
-}
-
-
-
-.activities h1{
-
-font-size:45px;
-
-color:red;
-
-text-shadow:0 0 20px red;
-
-margin-bottom:40px;
-
-}
-
-
-
-
-.activity-container{
-
-
-width:85%;
-
-margin:auto;
-
-
-display:grid;
-
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-
-gap:30px;
-
-
-}
-
-
-
-
-.activity-card{
-
-
-background:rgba(255,255,255,.08);
-
-
-border:1px solid red;
-
-
-border-radius:20px;
-
-
-overflow:hidden;
-
-
-box-shadow:0 0 20px rgba(255,0,0,.4);
-
-
-transition:.5s;
-
-
-}
-
-
-
-.activity-card:hover{
-
-
-transform:translateY(-15px) scale(1.03);
-
-
-box-shadow:0 0 40px red;
-
-
-}
-
-
-
-
-.activity-card img{
-
-
-width:100%;
-
-
-height:250px;
-
-
-object-fit:cover;
-
-
-transition:.5s;
-
-
-}
-
-
-
-
-.activity-card:hover img{
-
-
-transform:scale(1.1);
-
-
-}
-
-
-
-
-.activity-card h2{
-
-
-color:#ff3333;
-
-
-margin-top:20px;
-
-
-}
-
-
-
-
-.activity-card p{
-
-
-padding:15px;
-
-
-font-size:18px;
-/* =========================
-   BACKGROUND WAVE EFFECT
-========================= */
 
 body{
+    background:#050505;
+    color:white;
     overflow-x:hidden;
 }
 
 
-body::before{
+/* NAV */
 
-content:"";
-
-position:fixed;
-
-width:800px;
-
-height:800px;
-
-background:
-
-radial-gradient(circle,
-rgba(255,0,0,.35),
-transparent 70%);
-
-
-top:-300px;
-
-left:-200px;
-
-
-animation:waveMove 10s infinite alternate;
-
-
-z-index:-1;
-
-}
-
-
-
-body::after{
-
-content:"";
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-
-background:
-
-radial-gradient(circle,
-rgba(150,0,0,.3),
-transparent 70%);
-
-
-
-bottom:-300px;
-
-right:-200px;
-
-
-animation:waveMove2 12s infinite alternate;
-
-
-z-index:-1;
-
-}
-
-
-
-@keyframes waveMove{
-
-
-from{
-
-transform:translate(0,0)
-rotate(0deg);
-
-}
-
-
-to{
-
-transform:translate(200px,100px)
-rotate(360deg);
-
-}
-
-}
-
-
-
-@keyframes waveMove2{
-
-
-from{
-
-transform:translate(0,0)
-rotate(0deg);
-
-}
-
-
-to{
-
-transform:translate(-200px,-100px)
-rotate(-360deg);
-
-}
-
-}
-
-
-
-/* =========================
-   CARD FLOAT EFFECT
-========================= */
-
-
-.card,
-.profile-card,
-.activity-card,
-.skill-card,
-.education-card,
-.contact-card{
-
-
-animation:floatCard 4s ease-in-out infinite;
-
-
-}
-
-
-
-@keyframes floatCard{
-
-
-0%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-
-100%{
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-/* =========================
-   RED NEON TEXT
-========================= */
-
-
-h1,h2{
-
-
-text-shadow:
-
-0 0 10px red,
-
-0 0 20px red,
-
-0 0 40px red;
-
-
-}
-
-
-
-/* =========================
-   IMAGE GLOW
-========================= */
-
-
-img{
-
-
-transition:.5s;
-
-
-}
-
-
-
-img:hover{
-
-
-transform:scale(1.08);
-
-
-filter:
-
-drop-shadow(0 0 20px red);
-
-
-}
-
-
-
-/* =========================
-   BUTTON EFFECT
-========================= */
-
-
-button,
-.button{
-
-
-position:relative;
-
-overflow:hidden;
-
-
-}
-
-
-
-button:hover,
-.button:hover{
-
-
-box-shadow:
-
-0 0 10px red,
-
-0 0 30px red;
-
-
-}
-
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-
-.fade{
-
-
-opacity:0;
-
-transform:translateY(50px);
-
-transition:1s;
-
-
-}
-
-
-
-.fade.show{
-
-
-opacity:1;
-
-transform:translateY(0);
-
-
-}
-
-line-height:1.6;
 nav{
 
 position:fixed;
-
 top:0;
-
 width:100%;
 
 padding:20px;
@@ -734,8 +32,9 @@ align-items:center;
 
 z-index:999;
 
-}
+backdrop-filter:blur(10px);
 
+}
 
 
 nav h2{
@@ -745,7 +44,6 @@ color:red;
 }
 
 
-
 .menu{
 
 display:flex;
@@ -753,7 +51,6 @@ display:flex;
 gap:25px;
 
 }
-
 
 
 .menu a{
@@ -767,7 +64,6 @@ transition:.3s;
 }
 
 
-
 .menu a:hover{
 
 color:red;
@@ -777,7 +73,7 @@ text-shadow:0 0 15px red;
 }
 
 
-
+/* HOME */
 
 .hero{
 
@@ -787,9 +83,9 @@ display:flex;
 
 flex-direction:column;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 text-align:center;
 
@@ -819,8 +115,6 @@ box-shadow:0 0 40px red;
 
 font-size:55px;
 
-color:white;
-
 }
 
 
@@ -833,38 +127,303 @@ font-size:22px;
 
 
 
-
-.buttons a{
-
-
-display:inline-block;
-
-margin:20px;
+/* PERSONAL */
 
 
-padding:15px 30px;
+.personal{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
 
 
-background:red;
+.personal h1,
+.education h1,
+.activities h1,
+.skills h1,
+.contact h1{
 
+color:red;
 
-color:white;
+font-size:45px;
 
+text-shadow:0 0 20px red;
 
-border-radius:50px;
-
-
-text-decoration:none;
-
-
-transition:.4s;
-
+margin-bottom:40px;
 
 }
 
 
 
-.buttons a:hover{
+.profile-card{
+
+width:700px;
+
+max-width:90%;
+
+display:flex;
+
+gap:40px;
+
+padding:40px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+border:1px solid red;
+
+box-shadow:0 0 30px red;
+
+}
+
+
+
+.profile-card img{
+
+width:250px;
+
+height:250px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid red;
+
+}
+
+
+
+.info p{
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+
+
+/* EDUCATION */
+
+
+.education{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.education-container{
+
+display:flex;
+
+gap:30px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+
+.education-card{
+
+width:300px;
+
+padding:30px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid red;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 0 20px red;
+
+}
+
+
+
+.education-card h2{
+
+color:red;
+
+}
+
+
+
+
+/* ACTIVITIES */
+
+
+.activities{
+
+min-height:100vh;
+
+padding:80px 0;
+
+text-align:center;
+
+}
+
+
+.activity-container{
+
+width:85%;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.activity-card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid red;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 0 20px red;
+
+}
+
+
+
+.activity-card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+
+
+.activity-card h2{
+
+color:red;
+
+margin:15px;
+
+}
+
+
+
+.activity-card p{
+
+padding:15px;
+
+}
+
+
+/* CONTACT */
+
+
+.contact{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
+
+
+
+.contact-card{
+
+width:400px;
+
+max-width:90%;
+
+padding:30px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid red;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 0 30px red;
+
+}
+
+
+
+.contact-card p{
+
+font-size:22px;
+
+margin:25px;
+
+}
+
+
+/* BUTTON */
+
+
+.button{
+
+display:inline-block;
+
+padding:15px 30px;
+
+background:red;
+
+color:white;
+
+border-radius:50px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+
+.button:hover{
 
 background:white;
 
@@ -873,77 +432,6 @@ color:red;
 transform:scale(1.1);
 
 }
-
-
-
-
-.quick-menu{
-
-padding:80px 10%;
-
-text-align:center;
-
-}
-
-
-
-.menu-card{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:30px;
-
-}
-
-
-
-.menu-card a{
-
-
-width:180px;
-
-
-padding:30px;
-
-
-background:#111;
-
-
-color:white;
-
-
-text-decoration:none;
-
-
-border-radius:20px;
-
-
-border:1px solid red;
-
-
-transition:.4s;
-
-
-font-size:30px;
-
-
-}
-
-
-
-.menu-card a:hover{
-
-
-transform:translateY(-15px);
-
-
-box-shadow:0 0 30px red;
-
-
 }
 
 }
