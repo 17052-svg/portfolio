@@ -919,3 +919,128 @@ footer {
     }
 
 }
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    min-height: 800px;
+    padding: 80px 8%;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact-intro {
+    text-align: left;
+}
+
+.contact-label {
+    color: #e50914;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.contact-intro h2 {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+.contact-intro h2 span {
+    display: block;
+    color: #e50914;
+}
+
+.contact-intro > p:last-child {
+    color: #999;
+    line-height: 1.8;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #111;
+    border: 1px solid #292929;
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.contact-card:hover {
+    transform: translateX(10px);
+    border-color: #e50914;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.2);
+}
+
+.contact-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e50914;
+    color: #e50914;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.contact-card span {
+    color: #e50914;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.contact-card h3 {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-card b {
+    margin-left: auto;
+    color: #e50914;
+    font-size: 24px;
+}
+
+
+/* CONTACT RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .contact-page {
+        padding: 60px 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-intro {
+        text-align: center;
+    }
+
+    .contact-intro h2 {
+        font-size: 34px;
+    }
+
+}
