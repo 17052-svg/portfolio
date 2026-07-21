@@ -597,3 +597,120 @@ footer {
     }
 
 }
+/* =========================
+   EDUCATION PAGE
+========================= */
+
+.education-page {
+    min-height: 800px;
+    padding: 80px 8%;
+}
+
+.education-timeline {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.education-timeline::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e50914;
+    box-shadow: 0 0 15px #e50914;
+}
+
+.education-item {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.education-number {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border: 2px solid #e50914;
+    background: #080808;
+    color: #e50914;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    position: relative;
+    z-index: 2;
+}
+
+.education-content {
+    flex: 1;
+    padding: 28px 35px;
+    background: #111;
+    border: 1px solid #292929;
+    transition: 0.4s;
+}
+
+.education-content:hover {
+    transform: translateX(10px);
+    border-color: #e50914;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.2);
+}
+
+.education-level {
+    color: #e50914;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.education-content h2 {
+    margin-top: 12px;
+    font-size: 25px;
+}
+
+.school-name {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* EDUCATION RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .education-page {
+        padding: 60px 20px;
+    }
+
+    .education-timeline::before {
+        left: 25px;
+    }
+
+    .education-item {
+        gap: 20px;
+    }
+
+    .education-number {
+        width: 52px;
+        height: 52px;
+        font-size: 11px;
+    }
+
+    .education-content {
+        padding: 20px;
+    }
+
+    .education-content h2 {
+        font-size: 19px;
+    }
+
+    .school-name {
+        font-size: 15px;
+    }
+
+}
