@@ -1,185 +1,156 @@
-/* =====================
-   พื้นหลังคลื่นแดง
-===================== */
+/* =========================
+   RED WAVE BACKGROUND
+========================= */
 
-body::before{
+.wave {
+    position: fixed;
+    left: -20%;
+    width: 140%;
+    height: 300px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.25;
+}
 
-content:"";
+.wave1 {
+    top: 25%;
+    border-top: 2px solid #e50914;
+    box-shadow:
+        0 -20px 0 rgba(229, 9, 20, 0.15),
+        0 -40px 0 rgba(229, 9, 20, 0.08);
+    animation: waveMove 8s ease-in-out infinite alternate;
+}
 
-position:fixed;
+.wave2 {
+    top: 55%;
+    border-top: 1px solid #ff1a25;
+    opacity: 0.15;
+    animation: waveMoveReverse 10s ease-in-out infinite alternate;
+}
 
-width:800px;
 
-height:800px;
+/* =========================
+   RED GLOW
+========================= */
 
-top:-300px;
+.red-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    right: -200px;
+    background: #e50914;
+    filter: blur(180px);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -2;
+}
 
-left:-200px;
 
-background:
-radial-gradient(circle,
-rgba(255,0,0,.35),
-transparent 70%);
+/* =========================
+   ANIMATIONS
+========================= */
 
-animation:waveMove 10s infinite alternate;
+@keyframes waveMove {
 
-z-index:-1;
+    0% {
+        transform: translateX(-5%) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateX(5%) rotate(3deg);
+    }
+
+    100% {
+        transform: translateX(-3%) rotate(-2deg);
+    }
 
 }
 
 
+@keyframes waveMoveReverse {
 
-body::after{
+    0% {
+        transform: translateX(5%) rotate(3deg);
+    }
 
-content:"";
+    50% {
+        transform: translateX(-5%) rotate(-3deg);
+    }
 
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-bottom:-300px;
-
-right:-200px;
-
-background:
-radial-gradient(circle,
-rgba(150,0,0,.3),
-transparent 70%);
-
-animation:waveMove2 12s infinite alternate;
-
-z-index:-1;
+    100% {
+        transform: translateX(3%) rotate(2deg);
+    }
 
 }
 
 
+@keyframes rotateCircle {
 
-@keyframes waveMove{
+    from {
+        transform: rotate(0deg);
+    }
 
-from{
-
-transform:translate(0,0) rotate(0deg);
-
-}
-
-
-to{
-
-transform:translate(200px,100px) rotate(360deg);
-
-}
+    to {
+        transform: rotate(360deg);
+    }
 
 }
 
 
+/* =========================
+   TEXT ANIMATION
+========================= */
 
-@keyframes waveMove2{
+.hero-text {
+    animation: fadeUp 1s ease forwards;
+}
 
-from{
 
-transform:translate(0,0) rotate(0deg);
+.hero-image {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 
 
-to{
+@keyframes fadeIn {
 
-transform:translate(-200px,-100px) rotate(-360deg);
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
 
-}
-
-}
-
-
-
-/* =====================
-   การ์ดลอย
-===================== */
-
-
-.profile-card,
-.activity-card,
-.education-card,
-.contact-card,
-.skill-card{
-
-
-animation:float 4s ease-in-out infinite;
-
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 
 }
 
 
+/* =========================
+   HOVER EFFECT
+========================= */
 
-@keyframes float{
-
-
-0%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-15px);
-
-}
-
-
-100%{
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-/* =====================
-   ตัวหนังสือเรืองแสง
-===================== */
-
-
-h1,
-h2{
-
-
-text-shadow:
-
-0 0 10px red,
-
-0 0 30px red,
-
-0 0 50px red;
-
-
-}
-
-
-
-/* =====================
-   รูปมีแสงเวลาเอาเมาส์ชี้
-===================== */
-
-
-img{
-
-transition:.5s;
-
-}
-
-
-
-img:hover{
-
-transform:scale(1.08);
-
-filter:drop-shadow(0 0 20px red);
-
+.menu-card a,
+.buttons a {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
