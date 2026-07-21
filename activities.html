@@ -9,20 +9,324 @@
 
     <title>Activities | Thanachot</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/animation.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080808;
+            color: #ffffff;
+            font-family: 'Kanit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND EFFECTS
+        ========================= */
+
+        .wave {
+            position: fixed;
+            left: -20%;
+            width: 140%;
+            height: 300px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.25;
+        }
+
+        .wave1 {
+            top: 25%;
+            border-top: 2px solid #e50914;
+            box-shadow:
+                0 -20px 0 rgba(229, 9, 20, 0.15),
+                0 -40px 0 rgba(229, 9, 20, 0.08);
+            animation: waveMove 8s ease-in-out infinite alternate;
+        }
+
+        .wave2 {
+            top: 55%;
+            border-top: 1px solid #ff1a25;
+            opacity: 0.15;
+            animation: waveMoveReverse 10s ease-in-out infinite alternate;
+        }
+
+        .red-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            top: 20%;
+            right: -200px;
+            background: #e50914;
+            filter: blur(180px);
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes waveMove {
+            0% {
+                transform: translateX(-5%) rotate(-3deg);
+            }
+
+            50% {
+                transform: translateX(5%) rotate(3deg);
+            }
+
+            100% {
+                transform: translateX(-3%) rotate(-2deg);
+            }
+        }
+
+        @keyframes waveMoveReverse {
+            0% {
+                transform: translateX(5%) rotate(3deg);
+            }
+
+            50% {
+                transform: translateX(-5%) rotate(-3deg);
+            }
+
+            100% {
+                transform: translateX(3%) rotate(2deg);
+            }
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding: 25px 7%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 28px;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #e50914;
+        }
+
+        .menu {
+            display: flex;
+            gap: 28px;
+        }
+
+        .menu a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            color: #e50914;
+        }
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .activities-page {
+            min-height: 800px;
+            padding: 80px 8%;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .page-title p {
+            color: #e50914;
+            letter-spacing: 5px;
+            font-size: 13px;
+        }
+
+        .page-title h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(40px, 6vw, 75px);
+            letter-spacing: 5px;
+            margin-top: 15px;
+        }
+
+        .page-title h1 span {
+            color: transparent;
+            -webkit-text-stroke: 1px #e50914;
+        }
+
+        /* =========================
+           ACTIVITIES
+        ========================= */
+
+        .activity-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .activity-card {
+            background: #111;
+            border: 1px solid #292929;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            border-color: #e50914;
+            box-shadow: 0 0 30px rgba(229, 9, 20, 0.25);
+        }
+
+        .activity-image {
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .activity-card:hover .activity-image img {
+            transform: scale(1.08);
+        }
+
+        .activity-image span {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 18px;
+            text-shadow: 0 0 10px #e50914;
+        }
+
+        .activity-info {
+            padding: 25px;
+            position: relative;
+        }
+
+        .activity-info > p {
+            color: #e50914;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .activity-info h2 {
+            margin-top: 10px;
+            font-size: 23px;
+            padding-right: 40px;
+        }
+
+        .activity-arrow {
+            position: absolute;
+            right: 25px;
+            bottom: 22px;
+            color: #e50914;
+            font-size: 25px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #222;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .menu a {
+                font-size: 11px;
+            }
+
+            .activities-page {
+                padding: 60px 20px;
+            }
+
+            .activity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-image {
+                height: 230px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 <body>
 
+    <!-- Background Effects -->
+
     <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="red-glow"></div>
 
+
+    <!-- Navigation -->
 
     <header>
 
@@ -31,7 +335,6 @@
             <h2 class="logo">
                 DREAM<span>.</span>
             </h2>
-
 
             <div class="menu">
 
@@ -54,8 +357,9 @@
     </header>
 
 
-    <main class="activities-page">
+    <!-- Activities Page -->
 
+    <main class="activities-page">
 
         <div class="page-title">
 
@@ -70,9 +374,6 @@
 
         <section class="activity-grid">
 
-
-            <!-- ACTIVITY 01 -->
-
             <div class="activity-card">
 
                 <div class="activity-image">
@@ -82,7 +383,6 @@
                     <span>01</span>
 
                 </div>
-
 
                 <div class="activity-info">
 
@@ -101,8 +401,6 @@
             </div>
 
 
-            <!-- ACTIVITY 02 -->
-
             <div class="activity-card">
 
                 <div class="activity-image">
@@ -112,7 +410,6 @@
                     <span>02</span>
 
                 </div>
-
 
                 <div class="activity-info">
 
@@ -131,8 +428,6 @@
             </div>
 
 
-            <!-- ACTIVITY 03 -->
-
             <div class="activity-card">
 
                 <div class="activity-image">
@@ -142,7 +437,6 @@
                     <span>03</span>
 
                 </div>
-
 
                 <div class="activity-info">
 
@@ -161,8 +455,6 @@
             </div>
 
 
-            <!-- ACTIVITY 04 -->
-
             <div class="activity-card">
 
                 <div class="activity-image">
@@ -172,7 +464,6 @@
                     <span>04</span>
 
                 </div>
-
 
                 <div class="activity-info">
 
@@ -190,7 +481,6 @@
 
             </div>
 
-
         </section>
 
     </main>
@@ -201,7 +491,6 @@
         © 2026 THANACHOT LULASUK
 
     </footer>
-
 
 </body>
 
