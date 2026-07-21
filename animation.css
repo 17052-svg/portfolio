@@ -68,7 +68,6 @@
 
 }
 
-
 @keyframes waveMoveReverse {
 
     0% {
@@ -84,7 +83,6 @@
     }
 
 }
-
 
 @keyframes rotateCircle {
 
@@ -107,11 +105,9 @@
     animation: fadeUp 1s ease forwards;
 }
 
-
 .hero-image {
     animation: fadeIn 1.5s ease forwards;
 }
-
 
 @keyframes fadeUp {
 
@@ -126,7 +122,6 @@
     }
 
 }
-
 
 @keyframes fadeIn {
 
